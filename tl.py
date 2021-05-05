@@ -20,7 +20,7 @@ if upload is not None:
   model = load_model()
   if st.sidebar.button('PREDICT'):
     st.sidebar.write("Result:")
-    x = cv2.resize(opencv_image,(224,224))
+    x = cv2.resize(opencv_image,(128,128))
     x = np.expand_dims(x,axis=0)
     x = preprocess_input(x)
     y = model.predict(x)
