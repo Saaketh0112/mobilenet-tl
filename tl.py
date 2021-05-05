@@ -7,7 +7,7 @@ import cv2
 
 @st.cache()
 def load_model():
-  model = MobileNetV2()
+  model = eagle_final_model()
   return model
 
 st.title("Image Classifier - 1000 Categories!")
@@ -29,5 +29,4 @@ if upload is not None:
     # print the classification
     for i in range(3):
       out = label[0][i]
-      st.sidebar.title('%s (%.2f%%)' % (out[1], out[2]*100))
- 
+      st.sidebar.title('%s (%.2f%%)' % (out[1], out[1]*100))
